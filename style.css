@@ -8,11 +8,43 @@
     color: white;
 }
 
-.nav-link{
+.nav-link, .offcanvas-title{
     font-family: 'Titillium Web', sans-serif;
     color: #ff5e00;
 }
 
-a.nav-link.disabled{
-    color: black;
+a:hover, .botaoPesquisa:hover, .botao:hover{
+    color: #919191 !important;
+    border-color: #919191;
+}
+
+#produtos{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.botao{
+    background-color: white;
+    color: #ff5e00;
+    border: 1px #ff5e00 solid;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.botaoPesquisa{
+    background-color: #ff5e00;
+    color: white;
+    border: 1px white solid;
+}
+
+.card-text{
+    font-size: 20px;
+}
+
+#botaoCarrinho{
+    margin-left: 53%;
+    color: white;
+}
+
+img{
+    padding: 10px;
 }

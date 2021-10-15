@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Resolução de Problemas</title>
+        <title>SeuShoppingOnline</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/ed9296ef8e.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="shipping-fast-solid.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
@@ -21,60 +22,133 @@
                         <div class="container-fluid">
                             <span class="navbar-brand mb-0 h1">
                                 <i class="fas fa-shipping-fast"></i>
+                                
                                 SeuShoppingOnline
                             </span>
+
+                            <a id="botaoCarrinho" href="#carrinhoDeCompra" data-bs-toggle="offcanvas" aria-controls="offcanvasExample" data-bs-toggle="tooltip" data-bs-placement="top" title="SeuCarrinho">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+
+                            <form class="d-flex">
+                                <input class="form-control me-2" placeholder="Pesquisar" type="text">
+
+                                <button class="btn botaoPesquisa">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
                         </div>
                     </nav>
                 </div>
             </div>
-            <div class="row">
+            
+            <div id="navTab" class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                          <a class="nav-link" href="#remedios">Remédios</a>
-                        </li>
-
-                        <li class="nav-item">
-                          <a class="nav-link" href="#alimentacao">Alimentação</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#perfumaria">Perfumaria</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#brinquedos">Brinquedos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#roupas">Roupas e Calçados</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#acessorios">Acessórios e Eletrônicos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-shopping-cart"></i>
+                            <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home">
+                                <i class="fas fa-home"></i>
+                                Home
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">
-                                <i class="fas fa-dollar-sign"></i>
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#remedios">
+                                <i class="fas fa-pills"></i>
+                                Remédios
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#alimentacao">
+                                <i class="fas fa-hamburger"></i>
+                                Alimentação
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#perfumaria">
+                                <i class="fas fa-air-freshener"></i>
+                                Perfumaria
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#brinquedos">
+                                <i class="fas fa-chess"></i>
+                                Brinquedos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#roupas">
+                                <i class="fas fa-tshirt"></i>
+                                Roupas e Calçados
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#acessorios">
+                                <i class="fas fa-desktop"></i>
+                                Acessórios e Eletrônicos
+                            </a>
+                        </li>
+
+                        
                     </ul>
+                </div>
+            </div>
+
+            <div id="produtos" class="row">
+                <div class="tab-content">
+                    <div class="tab-pane fade show" id="home" role="tabpanel"></div>
+
+                    <div class="tab-pane fade" id="remedios" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 remedios"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="alimentacao" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 alimentacao"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="perfumaria" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 perfumaria"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="brinquedos" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 brinquedos"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="roupas" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 roupas"></div>
+                    </div>
+
+                    <div class="tab-pane fade" id="acessorios" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 acessorios"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="carrinhoDeCompra" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">
+                        <i class="fas fa-shopping-cart"></i>
+                        SeuCarrinho
+                    </h5>
+
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </body>
 </html>
 
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 <script src="js.js"></script>
