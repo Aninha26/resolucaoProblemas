@@ -1,5 +1,3 @@
-var count = 0;
-
 var categorias = [
   {
     id: 1,
@@ -337,7 +335,7 @@ $(".nav-link").click(function()
                                 <div class="col-md-8">
                                   <button class="btn botao">
                                     <i class="fas fa-cart-plus"></i>
-                                    
+
                                     Add ao carrinho
                                   </button>
                                 </div>
