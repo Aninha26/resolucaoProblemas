@@ -16,6 +16,7 @@
 
     <body>
         <div class="container">
+            <!-- barra de navegação -->
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar">
@@ -25,11 +26,11 @@
                                 
                                 SeuShoppingOnline
                             </span>
-
+                            <!-- botão do carrinho de compra -->
                             <a id="botaoCarrinho" href="#carrinhoDeCompra" data-bs-toggle="offcanvas" aria-controls="offcanvasExample" data-bs-toggle="tooltip" data-bs-placement="top" title="SeuCarrinho">
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
-
+                            <!-- campo de pesquisa -->
                             <form class="d-flex">
                                 <input class="form-control me-2" placeholder="Pesquisar" type="text">
 
@@ -41,7 +42,8 @@
                     </nav>
                 </div>
             </div>
-            
+
+            <!-- barra de navegação das abas das categorias de produtos -->
             <div id="navTab" class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-tabs">
@@ -93,12 +95,11 @@
                                 Acessórios e Eletrônicos
                             </a>
                         </li>
-
-                        
                     </ul>
                 </div>
             </div>
 
+            <!-- parte da tela que aparece os produtos -->
             <div id="produtos" class="row">
                 <div class="tab-content">
                     <div class="tab-pane fade show" id="home" role="tabpanel"></div>
@@ -129,6 +130,7 @@
                 </div>
             </div>
 
+            <!-- aba do carrinho de compras -->
             <div id="carrinhoDeCompra" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvas">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title">
@@ -140,9 +142,7 @@
                 </div>
 
                 <div class="offcanvas-body">
-                    <div>
-                        
-                    </div>
+                    <div></div>
                 </div>
             </div>
         </div>

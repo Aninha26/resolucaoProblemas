@@ -1,8 +1,9 @@
+//Array de objetos das categorias de produtos disponíveis no site
 var categorias = [
   {
-    id: 1,
-    nome: "remedios",
-    tela: false
+    id: 1, //id da categoria
+    nome: "remedios", //nome da categoria
+    tela: false //os produtos de tal categoria já foram mostrados na tela ou não
   },
 
   {
@@ -36,13 +37,14 @@ var categorias = [
   }
 ];
 
+//Array de objetos com todos os produtos disponíveis no site
 var produtos = [
     {
-      tipo: 1,
-      nome: "Dipirona",
-      id: 1,
-      preco: 2.90,
-      img: 'https://img.drogaraia.com.br/catalog/product/d/i/dipirona-monoidratada-500mg-com-10-comprimidos-prati-donaduzzi.jpg?width=520&height=520&quality=50&type=resize'
+      tipo: 1, //id da categoria do produto
+      nome: "Dipirona", //nome do produto
+      id: 1, //id do produto dentro da categoria
+      preco: 2.90, //preço do produto
+      img: 'https://img.drogaraia.com.br/catalog/product/d/i/dipirona-monoidratada-500mg-com-10-comprimidos-prati-donaduzzi.jpg?width=520&height=520&quality=50&type=resize' //link da imagem do produto pra ser exibido no site
     },
     
     {
@@ -302,24 +304,36 @@ var produtos = [
     }
 ];
 
+//Função que é executada quando o usuário clica na aba de alguma categoria de produto
 $(".nav-link").click(function() 
 {
+/* pega o valor do atributo data-bs-target da aba da barra de navegação das categorias (que é o mesmo nome da categoria),
+  tira o # do id e fica só com o nome da categoria */
   var categoria = $(this).attr("data-bs-target").split("#")[1];
 
+  //percorre todas as abas das categorias de produtos
   $(".tab-pane").each(function()
   {
+    //pega o id da aba clicada
     var tela = $(this).attr("id");
 
+    //percorre o array de categorias
     for(let cat of categorias)
     {
+      /* compara se a categoria da aba clicada e a categoria da tela é igual a categoria do array e se os produtos dessa 
+        categoria não foram mostrados na tela */
       if(categoria == cat.nome && tela == cat.nome && !cat.tela)
       {
+        //percorre o array de produtos
         for(var prod of produtos)
         {
+          //compara se o id da categoria do produto é igual ao id da categoria
           if(prod.tipo == cat.id)
           {
+            //formata o preço pro formato do real
             prod.preco = prod.preco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
 
+            //código html do card do produto
             var card = `<div class="col">
                           <div class="card">
                             <img src="${prod.img}" class="card-img-top" alt="${prod.nome}" height="300" width="300">
@@ -348,8 +362,11 @@ $(".nav-link").click(function()
                           </div>
                         </div>`;
 
+            //renderiza o card de cada produto da correspondente categoria na tela
             $("." + cat.nome).append(card);
 
+            /* muda pra true a exibição na tela dos produtos da categoria para não duplicar os produtos quando 
+              o usuário clicar na aba da categoria novamente */
             cat.tela = true;
           }
         }
