@@ -48,3 +48,11 @@ a:hover, .botaoPesquisa:hover, .botao:hover{
 img{
     padding: 10px;
 }
+
+input{
+    caret-color: #ff5e00;
+}
+
+input:focus{
+    border-color: no;
+}

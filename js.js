@@ -355,7 +355,7 @@ $(".nav-link").click(function()
                                 </div>
 
                                 <div class="col-md-4">
-                                  <input id="qtd" class="form-control" placeholder="Qtd." type="number" onclick="adicionarAoCarrinho();">
+                                  <input id="qtd" class="form-control" placeholder="Qtd." type="number">
                                 </div>
                               </div>
                             </div>
